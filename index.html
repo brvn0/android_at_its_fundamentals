@@ -1,0 +1,107 @@
+<!doctype html>
+<!-- TODO: thema auf opal schreiben -->
+<html lang="de">
+
+<head>
+    <meta name="author" content="B. Lange" />
+    <title>Android in seinen Grundbausteinen</title>
+
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <header>
+        <h1>Android in seinen Grundbausteinen</h1>
+    </header>
+    <nav>
+        <a href="index.html" class="active">
+            <p>Home</p>
+        </a>
+        <a href="fazit/fazit.html">
+            <p>Fazit</p>
+        </a>
+        <a href="quellen/quellen.html">
+            <p>Quellen</p>
+        </a>
+    </nav>
+    <article>
+        <!-- Main content will go here -->
+        <!-- Sources will be linked with their IDs so if someone has a smaller device they don't have to scroll everytime they wanna check one out -->
+        <h3>Was ist Android?</h3>
+        <p>
+            Android ist im Grunde das Betriebssystem, das die meisten Handys, die nicht von Apple sind haben. Im März
+            2022 hatte Android einen Markanteil von 66,4%<sup><a href="quellen/quellen.html#q1"
+                    target="_blank">[1]</a></sup> gegenüber Apples IOS.
+            <br>Android zeichnet sich dadurch aus, dass es Open-Source ist. Im Grunde heißt das, dass jeder den Code von
+            Android anschauen und nach Belieben modifizieren kann. Wenn jemand Android modifiziert wird diese
+            modifizierte Version '<a href="#customRom">custom Rom</a>' genannt, dazu aber später mehr.
+            <br>Android basiert grundsätzlich auf dem Linux Kernel. Hat aber einen eigenen <span class="highlighted"
+                title="Kopierte Version einer Software; enthält meist Veränderungen, die nicht im Original zu finden sind">Fork</span>
+            des Kernels und diesen entsprechend an mobile Geräte und deren <span class="highlighted"
+                title="Funktionsweise einer CPU; Handys meistens arm oder arm64; PCs meistens mit x86 oder x86_64">CPU-Architektur</span>
+            angepasst.
+            <br>Unterschiedlich zu anderen Betriebssystemen, wie Windows oder <span class="highlighted"
+                title="Kombination aus dem Linux Kernel und den freien (GNU) Programmen">GNU/Linux</span> ist jedoch,
+            dass bei Android der Benutzer standardmäßig nicht alle Rechte besitzt. Der <span class="highlighted"
+                title="Höchstmögliche Stufe der Berechtigungen bei Betriebssystemen">Root-Zugang</span> steht dem
+            Benutzer nicht zur Verfügung und kann nur über Umwege frei geschaltet werden.
+        </p>
+        <h3>Vor- und Nachteile eines Open-Source Betriebssystems</h3>
+        <p class="underline">Vorteile</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium id placeat eius rerum corporis molestias
+            nemo similique dolorem, cum doloribus expedita culpa quia eveniet voluptatum voluptatibus. Culpa ea veniam
+            sapiente.</p>
+        <p class="underline">Nachteile</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quo enim voluptates iste excepturi
+            inventore odit, dolor facere delectus consequatur voluptas natus voluptatibus laudantium! Asperiores
+            voluptate aliquid blanditiis quisquam officia.</p>
+
+        <h3 id="customRom">Custom ROMs</h3>
+        <p>
+            Custom ROMs sind auf Basis von AOSP
+        </p>
+
+        <h3>AOSP vs. OEM ROMs</h3>
+        <p>
+            Das Betriebssystem auf eurem Telefon unterscheidet sich wahrscheinlich stark von der Ursprungsversion von
+            Android. Das liegt daran, dass viele Hersteller
+            <br>1. eigene Apps mitliefern.
+            <br>2. <span class="highlighted"
+                title="beispielsweise Google Maps, der Playstore oder die Google Play Services (gms)">Google Apps</span>
+            vorinstallieren.
+            <br>3. eigene Veränderungen an der Software vornehmen.<br>
+            <br>Durch vor allem Punkt 3 kommt es dazu, dass die Software bei Huawei und Samsung optisch starke
+            Unterschiede aufweist und man kaum glauben kann, dass im Hintergrund das gleiche Betriebssystem läuft.
+            Natürlich kann solch eine Veränderung durch den Hersteller Vorteile haben, vergleicht man aber z. B. MIUI
+            (von Xiaomi) mit purem <span class="highlighted"
+                title="= Android Open Source Project; bezeichnet eine vom Hersteller nicht modifizierte Form von Android">AOSP</span>
+            auf dem gleichen Gerät so ist sowohl die Akku-Laufzeit als auch die Leistung selbst höher, da weniger
+            Ressourcen durch das Betriebssystem genutzt werden.
+            <br>Dazu ein kurzes Experiement: <br>
+            <!-- TODO: compare stock geekbench and aosp geekbench scores -->
+
+            <br>Nun fragt man sich natürlich, warum nicht jeder einen AOSP Fork wie LineageOS benutzt. Leider machen es
+            viele Hersteller den Benutzern schwer custom Roms zu installieren. Natürlich möchten die Hersteller, dass
+            man ihre Software benutzt, da sie so nunmal Daten gewinnen und diese wahrscheinlich auch verkaufen bzw.
+            weitergeben. Außerdem kann der Hersteller auf dem eigenen System Apps mitgeben, die er selbst programmiert.
+            Um besser zu erklären, was ich meine verweise ich hierbei auf Xiaomi, die in manchen ihrer mitgelieferten
+            Apps Werbung einbauen, um mehr Profit mit ihren Nutzern zu erziehlen.
+            <br>Nun aber zu den faktischen Schwierigkeiten, die es zu überwinden gilt, um eine custom Rom zu
+            installieren:
+            <br>1. gesperrte <span class="highlighted"
+                title="Software, die das eigentliche Betriebssystem (wie z.B. Android) startet">Bootloader</span>
+            <br><span class="indent">Wenn der Bootloader gesperrt ist, kann nur die durch den Hersteller
+                'unterschriebene' Rom gestartet werden. Manche Hersteller bieten an, den Schlüssel zum Entsperren des
+                Bootloaders herauszugeben, manche Hersteller aber auch nicht.</span>
+            <br>2. Verlieren der Garantie
+            <br><span class="indent">Nur ein äußerst geringer Anteil der Hersteller entzieht den Benutzern nicht die
+                Garantie für ihr Handy, sobald sie den Bootloader entsperren, obwohl dafür kein offensichtlicher Grund
+                besteht, außer die Benutzer, wie oben erklärt von der Installation von custom Roms abzuhalten.</span>
+        </p>
+    </article>
+    <footer>
+        <p>Copyright © 2022 <a href="https://www.github.com/brvn0" target="_self">Bruno Lange</a></p>
+    </footer>
+</body>
+
+</html>

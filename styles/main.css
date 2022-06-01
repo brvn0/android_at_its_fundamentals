@@ -1,0 +1,141 @@
+/* 
+    this file contains all styles that are used over the whole site
+    and imports the util classes + colors + font(s)
+
+    ONLY THIS FILE NEEDS TO BE LOADED INTO AN HTML DOCUMENT
+*/
+
+
+/*
+    import color palettes
+    only the frappe color palette was used -> therefore deleted the other color-palettes
+    github.com/catppuccin
+*/
+@import url(colors.css);
+
+/*
+    import util classes
+    eg. underline or indent
+*/
+@import url(util.css);
+
+/* 
+    import quicksand font (bc i like it)
+    fonts.google.com
+*/
+@font-face {
+    font-family: 'quicksand';
+    src: url('Quicksand.ttf');
+}
+
+/* TODO: create a styling for mobile devices; ask teacher if needed! */
+/* real styling begins here */
+body {
+    background-color: var(--ctp-base);
+    color: var(--ctp-text);
+    font-family: monospace, sans-serif;
+}
+
+/* use flex display to center title */
+header {
+    color: var(--ctp-mauve);
+    display: flex;
+    justify-content: center;
+}
+
+/* use flex display to align nav items next to each other */
+nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a {
+    color: var(--ctp-sky);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--ctp-red);
+    cursor: pointer;
+}
+
+article {
+    padding: 20px;
+    padding-bottom: 0px;
+    margin: 20px 0px 40px 0px;
+    /* this needs to be done else the copyright note might overlay the main content at the bottom of the page!  */
+}
+
+article .underline {
+    margin-bottom: 0px;
+}
+
+article h3 {
+    color: var(--ctp-teal);
+    margin-bottom: 0px;
+}
+
+/* insert "> " before headings */
+article h3::before {
+    content: "> ";
+}
+
+article h3:target {
+    color: var(--ctp-flamingo);
+}
+
+article p {
+    margin-top: 5px;
+    text-align: justify !important;
+}
+
+/* for highlighting the linked source */
+article p:target a {
+    color: var(--ctp-flamingo);
+}
+
+article br {
+    margin-top: 5px;
+}
+
+/* article a: for the sources site */
+article a {
+    text-decoration: none;
+    color: var(--ctp-sky);
+}
+
+article a:hover {
+    cursor: pointer;
+}
+
+/* 
+    article sup a -> for the main site bc sup is used only there
+    -> unique design for the main and source page possible without using ids or classes 
+*/
+article sup a {
+    color: var(--ctp-sky);
+    text-decoration: none;
+    font-size: 85%;
+}
+
+article sup a:hover {
+    color: var(--ctp-red);
+    cursor: pointer;
+}
+
+/* use flex display to center copyright note */
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+footer a {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--ctp-sky);
+}
+
+footer a:hover {
+    color: var(--ctp-red);
+}

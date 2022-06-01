@@ -1,0 +1,25 @@
+/* 
+    This file contains only util classes
+    eg. underline or indent
+*/
+
+.underline {
+    text-decoration: underline;
+}
+
+.indent {
+    display: flex;
+    justify-content: left;
+    margin-left: 30px;
+    font-size: 90%;
+}
+
+.highlighted {
+    color: var(--ctp-sky);
+    cursor: help;
+}
+
+/* used for highlighting the active nav element */
+nav .active {
+    color: var(--ctp-maroon);
+}

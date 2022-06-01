@@ -1,0 +1,33 @@
+/*
+    Catpuccin color palette
+    github.com/catppuccin
+*/
+
+:root {
+	--ctp-rosewater: #f2d5cf;
+	--ctp-flamingo: #eebebe;
+	--ctp-pink: #f4b8e4;
+	--ctp-mauve: #ca9ee6;
+	--ctp-red: #e78284;
+	--ctp-maroon: #ea999c;
+	--ctp-peach: #ef9f76;
+	--ctp-yellow: #e5c890;
+	--ctp-green: #a6d189;
+	--ctp-teal: #81c8be;
+	--ctp-sky: #99d1db;
+	--ctp-sapphire: #85c1dc;
+	--ctp-blue: #8caaee;
+	--ctp-lavender: #babbf1;
+	--ctp-text: #c6ceef;
+	--ctp-subtext1: #b5bddc;
+	--ctp-subtext0: #a5acc9;
+	--ctp-overlay2: #949bb7;
+	--ctp-overlay1: #838aa4;
+	--ctp-overlay0: #737891;
+	--ctp-surface2: #62677e;
+	--ctp-surface1: #51566c;
+	--ctp-surface0: #414559;
+	--ctp-base: #303446;
+	--ctp-mantle: #292c3c;
+	--ctp-crust: #232634;
+}
