@@ -66,6 +66,7 @@ article {
     /* this needs to be done else the copyright note might overlay the main content at the bottom of the page!  */
 }
 
+/* for inline */
 article .underline {
     margin-bottom: 0px;
 }
